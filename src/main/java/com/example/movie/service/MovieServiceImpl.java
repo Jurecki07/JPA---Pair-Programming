@@ -20,21 +20,22 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public Movie get(int id) {
-        return null;
+        return movieRepository.findOne(id);
     }
 
     @Override
     public List<Movie> get() {
-        return null;
+        return movieRepository.findAll();
     }
 
     @Override
     public Movie update(Movie movie) {
-        return null;
+        return movieRepository.save(movie);
     }
 
     @Override
     public void delete(int id) {
+        movieRepository.delete(id);
 
     }
 }
